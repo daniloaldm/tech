@@ -20,3 +20,15 @@ class Processor(models.Model):
 
     def __str__(self):
         return f"{self.processor}"
+
+class VideoCard(models.Model):
+    available_videocards = [
+        ("Gigabyte Geforce GTX 1060 6GB", "Gigabyte Geforce GTX 1060 6GB"),
+        ("PNY RTX 2060 6GB", "PNY RTX 2060 6GB"),
+        ("Radeon RX 580 8GB", "Radeon RX 580 8GB"),
+    ]
+
+    video_card= models.CharField(max_length=100, choices=available_videocards)
+
+    def __str__(self):
+        return f"{self.video_card}"
