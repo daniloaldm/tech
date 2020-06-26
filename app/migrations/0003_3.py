@@ -19,7 +19,7 @@ def populate_videocards(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('app', '0003_videocard'),
+        ('app', '0002_2'),
     ]
 
     operations = [

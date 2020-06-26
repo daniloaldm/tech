@@ -18,7 +18,7 @@ def populate_rammemorys(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('app', '0005_rammemory'),
+        ('app', '0003_3'),
     ]
 
     operations = [

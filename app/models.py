@@ -48,3 +48,35 @@ class RamMemory(models.Model):
 
     def __str__(self):
         return f"{self.ram_memory} {self.ram_memory_size}GB"
+
+class Motherboard(models.Model):
+    available_motherboard = [
+        ("Asus Prime", "Asus Prime"),
+        ("Gigabyte", "Gigabyte"),
+        ("ASRock Fatal", "ASRock Fatal")
+    ]
+
+    supported_processors = [
+        ("Intel", "Intel"),
+        ("AMD", "AMD"),
+        ("Intel e AMD", "Intel e AMD")
+    ]
+        
+    ram_slots = [
+        (2, "2"),
+        (4, "4")
+    ]
+
+    max_ram = [
+        (16, "16"),
+        (64, "64")
+    ]
+
+    motherboard = models.CharField(max_length=100, choices=available_motherboard)
+    supp_processors = models.CharField(max_length=100, choices=supported_processors)
+    r_slots = models.PositiveIntegerField(choices=ram_slots)
+    m_ram = models.PositiveIntegerField(choices=max_ram)
+    has_integrated_video = models.BooleanField()
+
+    def __str__(self):
+        return f"{self.motherboard}"

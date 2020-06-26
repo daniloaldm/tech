@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import (Processor, VideoCard, RamMemory)
+from .models import (Processor, VideoCard, RamMemory, Motherboard)
 
 
 class ProcessorSerializer(serializers.ModelSerializer):
@@ -22,4 +22,11 @@ class RamMemorySerializer(serializers.ModelSerializer):
     class Meta:
 
         model = RamMemory
+        fields = '__all__'
+
+class MotherboardSerializer(serializers.ModelSerializer):
+
+    class Meta:
+
+        model = Motherboard
         fields = '__all__'
