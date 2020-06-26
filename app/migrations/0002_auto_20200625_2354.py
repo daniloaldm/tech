@@ -6,18 +6,10 @@ def populate_processors(apps, schema_editor):
 
     Processor = apps.get_model('app', 'processor')
     [
-        Processor(
-            processor="Intel Core i5", processor_brand="Intel"
-        ).save(),
-        Processor(
-            processor="Intel Core i7", processor_brand="Intel"
-        ).save(),
-        Processor(
-            processor="AMD Ryzen 7", processor_brand="AMD"
-        ).save(),
-        Processor(
-            processor="AMD Athlon", processor_brand="AMD"
-        ).save()
+        Processor(processor="Intel Core i5", processor_brand="Intel").save(),
+        Processor(processor="Intel Core i7", processor_brand="Intel").save(),
+        Processor(processor="AMD Ryzen 7", processor_brand="AMD").save(),
+        Processor(processor="AMD Athlon", processor_brand="AMD").save()
     ]
 
 class Migration(migrations.Migration):
