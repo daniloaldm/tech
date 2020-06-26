@@ -32,3 +32,19 @@ class VideoCard(models.Model):
 
     def __str__(self):
         return f"{self.video_card}"
+
+class RamMemory(models.Model):
+    available_ram = [
+        ("Hiper X", "Hiper X"),
+    ]
+        
+    ram_size = [
+        (4, "4"), (8, "8"),
+        (16, "16"), (32, "32"), (64, "64")
+    ]
+
+    ram_memory = models.CharField(max_length=100, choices=available_ram)
+    ram_memory_size = models.PositiveIntegerField(choices=ram_size)
+
+    def __str__(self):
+        return f"{self.ram_memory} {self.ram_memory_size}GB"
