@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 from django.db import migrations, models
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 
 class Processor(models.Model):
@@ -80,3 +81,32 @@ class Motherboard(models.Model):
 
     def __str__(self):
         return f"{self.motherboard}"
+
+class Computer(models.Model):
+    mother_board_id = models.ForeignKey(Motherboard, on_delete=models.CASCADE)
+    video_board_id = models.ForeignKey(VideoCard, on_delete=models.CASCADE, blank=False, null=True)
+    processor_id = models.ForeignKey(Processor, on_delete=models.CASCADE)
+    memory_id = models.ManyToManyField(RamMemory)
+
+    def sum_ram(self):
+
+        memories = list(self.memory_id.values())
+        total_size = 0
+
+        for memory in memories:
+            total_size += memory['ram_memory_size']
+        return total_size
+
+    def __str__(self):
+        base_string = f"{self.mother_board_id} {self.processor_id} {self.sum_ram()} GB "
+
+        if self.video_board_id is None:
+            return base_string
+        return f"{base_string} {self.video_board_id.video_card}"
+
+class Order(models.Model):
+    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    computer_id = models.ManyToManyField(Computer)
+
+    def __str__(self):
+        return f"Usuário {self.user_id.username} fez o pedido do computador: {self.computador_id}"

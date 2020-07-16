@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import (Processor, VideoCard, RamMemory, Motherboard)
+from .models import (Processor, VideoCard, RamMemory, Motherboard, Computer, Order)
 
 
 class ProcessorSerializer(serializers.ModelSerializer):
@@ -30,3 +30,22 @@ class MotherboardSerializer(serializers.ModelSerializer):
 
         model = Motherboard
         fields = '__all__'
+
+class ComputerSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Computer
+        fields = "__all__"
+
+    # def validate(self, data):
+    #     Validators.number_ram(data)
+    #     Validators.ram_size(data)
+    #     Validators.processor(data)
+    #     Validators.video_board(data)
+    #     return data
+
+class OrderSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Order
+        fields = "__all__"
