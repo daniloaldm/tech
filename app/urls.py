@@ -11,5 +11,5 @@ router.register(r'computers', ComputerView)
 router.register(r'orders', OrderView)
 
 urlpatterns = [
-    path('api/', include(router.urls)),
+    path('', include(router.urls)),
 ]
