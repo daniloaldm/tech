@@ -106,7 +106,13 @@ media/
 *.pyc
 *.db
 *.pid
-# django migrations 
-# **/migrations/**
-# !**/migrations
-# !**/migrations/__init__.py
+# .Python
+# [Bb]in
+# [Ii]nclude
+# [Ll]ib
+# [Ll]ib64
+# [Ll]ocal
+# [Ss]cripts
+# pyvenv.cfg
+# .venv
+# pip-selfcheck.json
