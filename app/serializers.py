@@ -37,7 +37,7 @@ class ComputerSerializer(serializers.ModelSerializer):
         fields = "__all__"
     
 
-    def create(self, validated_data):
+    def validate(self, validated_data):
 
         # validator number_ram
         num_slots = validated_data['mother_board_id'].r_slots
