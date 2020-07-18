@@ -9,10 +9,10 @@ ENV PYTHONUNBUFFERED 1
 # create root directory for our project in the container
 RUN mkdir /tech
 
-# Set the working directory to /music_service
+# Set the working directory to /tech
 WORKDIR /tech
 
-# Copy the current directory contents into the container at /music_service
+# Copy the current directory contents into the container at /tech
 ADD . /tech/
 
 RUN pip install pipenv
