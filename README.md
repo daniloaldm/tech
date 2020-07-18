@@ -23,7 +23,6 @@ Para o desenvolvimento do projeto foi utilizada as seguintes tecnologias:
 
 ## Instalação
 
-Para facilitar os teste utilize o Insominia que possui todas as rotas utilizadas.
 ```
 # Clone o repositório
 	git clone git@github.com:daniloaldm/tech.git
@@ -35,6 +34,9 @@ Para facilitar os teste utilize o Insominia que possui todas as rotas utilizadas
 ```
 # Inicie o Docker com o comando
 	./start
+
+#Acesse
+	http://localhost:8000/
 
 ```
 
