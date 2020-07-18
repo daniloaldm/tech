@@ -39,6 +39,9 @@ Para o desenvolvimento do projeto foi utilizada as seguintes tecnologias:
 	http://localhost:8000/
 
 ```
+## Api no Heroku
+
+[https://high-tech-app.herokuapp.com](https://high-tech-app.herokuapp.com/)
 
 ## :man_technologist: Autor
 
