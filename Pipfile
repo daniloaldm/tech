@@ -1,0 +1,23 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+django = "==2.2.5"
+djangorestframework = "==3.10.3"
+pygments = "==2.4.2"
+pylint = "*"
+autopep8 = "*"
+pylint-django = "*"
+django-filter = "*"
+django-rest-swagger = "*"
+whitenoise = "*"
+gunicorn = "*"
+django-heroku = "*"
+psycopg2 = "==2.8.4"
+
+[requires]
+python_version = "3.6"

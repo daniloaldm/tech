@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+docker-compose up -d && 
+echo "
+===================== 🚀 Done 🚀 ===================
+
+      Created by Danilo Alexandrino
+      Access your new links:
+
+      🌎 Web server: http://localhost:8000/
+
+===================== 🚀 Done 🚀 ==================="
