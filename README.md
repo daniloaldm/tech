@@ -4,9 +4,12 @@
 
 Monte seu Computador onde seus clientes podem montar um computador pessoal (desktop) sob demanda escolhendo as peças disponíveis que irão compor o computador e a loja irá se responsabilizar pela montagem, certificação (realização de testes) e envio ao cliente. O cliente entra no site e pode selecionar as seguintes peças para montar o seu computador: 
 
-● Processador 
+● Processador
+
 ● Placa Mãe 
+
 ● Memória RAM 
+
 ● Placa de vídeo 
 
 ## Tecnologias utilizadas
