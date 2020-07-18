@@ -35,7 +35,7 @@ Para o desenvolvimento do projeto foi utilizada as seguintes tecnologias:
 # Inicie o Docker com o comando
 	./start
 
-#Acesse
+# Acesse
 	http://localhost:8000/
 
 ```
