@@ -89,4 +89,4 @@ class OrderSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Order
-        fields = ['computer_id']
+        fields = "__all__"
