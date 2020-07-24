@@ -35,7 +35,6 @@ class ComputerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Computer
         fields = "__all__"
-        depth = 1
     
 
     def validate(self, validated_data):
